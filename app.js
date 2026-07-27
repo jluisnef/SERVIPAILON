@@ -168,6 +168,20 @@ class StorageManager {
                 rating: 8.9,
                 bio: 'Especialista en construir aplicaciones web amigables, escalables y seguras. Más de 30 proyectos entregados con éxito para startups y pymes.'
             },
+            {
+                id: 'pro_107',
+                name: 'neftis medina leaños',
+                area: 'services',
+                title: 'ingeniera',
+                photo: 'img/NEFTIS.jpeg',
+                phone: '+59172857225',
+                skills: ['React', 'Node.js', 'TypeScript', 'AWS Cloud', 'Docker'],
+                experience: 7,
+                status: 'available',
+                rating: 8.9,
+                bio: 'Especialista en construir aplicaciones web amigables, escalables y seguras. Más de 30 proyectos entregados con éxito para startups y pymes.'
+            },
+
 
         ];
     }
