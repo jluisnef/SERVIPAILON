@@ -14,7 +14,7 @@
 // 1. CLASE STORAGE MANAGER (Persistencia de Personal y Contrataciones)
 // ============================================================================
 class StorageManager {
-    constructor(prosKey = 'pandatasker_pros', hiringsKey = 'pandatasker_hirings') {
+    constructor(prosKey = 'pandatasker_pros_demo', hiringsKey = 'pandatasker_hirings_demo') {
         this.prosKey = prosKey;
         this.hiringsKey = hiringsKey;
     }
@@ -127,6 +127,7 @@ class StorageManager {
                 rating: 5.0,
                 bio: 'Más de 10 años brindando soluciones eléctricas residenciales garantizadas con máxima limpieza, puntualidad y calidez.'
             },
+
             {
                 id: 'pro_104',
                 name: 'Dra. Patricia Rivas',
@@ -152,7 +153,22 @@ class StorageManager {
                 status: 'available',
                 rating: 4.7,
                 bio: 'Acompaño a emprendedores y empresas a organizar sus números de manera cercana y clara para impulsar una expansión rentable.'
-            }
+            },
+
+            {
+                id: 'pro_106',
+                name: 'luis torres',
+                area: 'services',
+                title: 'LUIS EL MECANICO',
+                photo: 'img/LIBER.jpeg',
+                phone: '+59172857225',
+                skills: ['React', 'Node.js', 'TypeScript', 'AWS Cloud', 'Docker'],
+                experience: 7,
+                status: 'available',
+                rating: 8.9,
+                bio: 'Especialista en construir aplicaciones web amigables, escalables y seguras. Más de 30 proyectos entregados con éxito para startups y pymes.'
+            },
+
         ];
     }
 
@@ -216,7 +232,7 @@ class TalentManager {
             experience: Number(data.experience) || 1,
             status: data.status || 'available',
             rating: 5.0,
-            bio: data.bio ? data.bio.trim() : 'Especialista verificado en la plataforma amigable PandaTasker.'
+            bio: data.bio ? data.bio.trim() : 'Especialista verificado en la plataforma amigable ServiPailon.'
         };
 
         this.pros.unshift(newPro);
@@ -454,7 +470,7 @@ class UIController {
                     </div>
 
                     <div class="pro-card-footer">
-                        <a href="${isAvailable ? `https://wa.me/${pro.phone}?text=Hola%20${encodeURIComponent(pro.name)},%20te%20encontré%20en%20PandaTasker%20y%20me%20gustaría%20solicitar%20tus%20servicios.` : '#'}" 
+                        <a href="${isAvailable ? `https://wa.me/${pro.phone}?text=Hola%20${encodeURIComponent(pro.name)},%20te%20encontré%20en%20ServiPailon%20y%20me%20gustaría%20solicitar%20tus%20servicios.` : '#'}" 
                            target="${isAvailable ? '_blank' : '_self'}" 
                            class="btn-hire ${!isAvailable ? 'busy' : ''}" 
                            style="text-decoration: none; display: inline-flex; justify-content: center; align-items: center; gap: 6px; padding: 10px 15px; border-radius: 20px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; ${!isAvailable ? 'background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); color: #ef4444; cursor: not-allowed; opacity: 0.8;' : 'background: var(--accent-gradient); color: white;'}" 
